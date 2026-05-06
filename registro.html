@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h2>Crear Cuenta</h2>
+        <form id="formulario-registro">
+            <input type="text" id="nombre" placeholder="Nombre completo" required>
+            <input type="email" id="correo" placeholder="Correo institucional" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <select id="rol">
+                <option value="alumno">Alumno</option>
+                <option value="docente">Docente / Administrador</option>
+            </select>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p style="margin-top:15px;"><a href="login.html">Ya tengo cuenta</a></p>
+    </div>
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

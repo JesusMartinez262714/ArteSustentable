@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Proyecto</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Arte Sustentable</div>
+        <nav><ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+        </ul></nav>
+    </header>
+
+    <main class="contenedor">
+        <div id="contenedor-detalle-proyecto" style="background:white; padding:30px; border-radius:8px;">
+            <span id="detalle-nivel" class="etiqueta-nivel"></span>
+            <h2 id="detalle-titulo"></h2>
+            <p><strong>Autor:</strong> <span id="detalle-autor"></span></p>
+            <img id="detalle-imagen" src="" style="width:100%; max-height:400px; object-fit:cover; margin:20px 0; border-radius:8px;">
+            <h3>Materiales:</h3>
+            <ul id="lista-materiales" style="margin:15px 20px;"></ul>
+            <h3>Instrucciones:</h3>
+            <div id="contenedor-instrucciones" style="margin-top:15px;"></div>
+            <button id="btn-guardar-proyecto" class="btn-principal" style="margin-top:30px;">Me sirvió este proyecto</button>
+        </div>
+    </main>
+
+    <script src="js/db.js"></script>
+    <script src="js/proyecto.js"></script>
+    <script src="js/estado-sesion.js"></script>
+</body>
+</html>

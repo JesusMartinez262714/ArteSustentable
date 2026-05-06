@@ -1,0 +1,31 @@
+:root { --verde: #27ae60; --oscuro: #2c3e50; --tierra: #d35400; --fondo: #f4f7f6; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { background-color: var(--fondo); display: flex; flex-direction: column; min-height: 100vh; }
+
+/* Navegación Universal */
+.navbar { display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 30px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.nav-links { list-style: none; display: flex; gap: 15px; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--oscuro); font-weight: bold; font-size: 14px; transition: 0.3s; }
+.nav-links a:hover { color: var(--verde); }
+
+/* Botones Especiales */
+.btn-nav { background: var(--verde); color: white !important; padding: 8px 12px; border-radius: 4px; }
+.btn-nav:hover { background: #219150; }
+.btn-salir { color: #e74c3c !important; }
+
+/* Contenedores */
+.contenedor { max-width: 1200px; margin: 30px auto; padding: 0 20px; flex: 1; }
+.grid-proyectos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.tarjeta-proyecto { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer; }
+.tarjeta-imagen img { width: 100%; height: 200px; object-fit: cover; }
+.tarjeta-contenido { padding: 15px; }
+
+/* Formularios y Tablas */
+.contenedor-formulario { background: white; padding: 30px; border-radius: 8px; max-width: 500px; margin: 50px auto; }
+input, select, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+button { background: var(--verde); color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; }
+.tabla-admin { width: 100%; border-collapse: collapse; background: white; margin-top: 20px; }
+.tabla-admin th, .tabla-admin td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+
+.footer { text-align: center; padding: 20px; background: var(--oscuro); color: white; margin-top: auto; }
+@media (max-width: 768px) { .navbar { flex-direction: column; } .nav-links { margin-top: 15px; flex-wrap: wrap; justify-content: center; } }

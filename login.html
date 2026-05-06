@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h2>Entrar a Arte Sustentable</h2>
+        <form id="formulario-login">
+            <input type="email" id="correo" placeholder="Correo electrónico" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+            <p id="mensaje-error" style="color:red; margin-top:10px;"></p>
+        </form>
+        <p style="margin-top:15px;">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+    </div>
+    <script src="js/db.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

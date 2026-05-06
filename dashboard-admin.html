@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Arte Sustentable</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/proteccion.js"></script>
+</head>
+<body>
+    <header class="navbar navbar-admin">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Arte Sustentable</a></div>
+        <div class="logo">Administración</div>
+        <nav>
+            <ul class="nav-links">
+                <!-- Menú dinámico inyectado por estado-sesion.js -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <h2>Resumen del Sistema</h2>
+        
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
+            <div style="flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                <h3>Usuarios Registrados</h3>
+                <p id="num-usuarios" style="font-size: 24px; font-weight: bold;">0</p>
+            </div>
+            <div style="flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                <h3>Proyectos Totales</h3>
+                <p id="num-proyectos" style="font-size: 24px; font-weight: bold; color: var(--verde);">0</p>
+            </div>
+            <div style="flex: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+                <h3>Pendientes de Revisión</h3>
+                <p id="num-pendientes" style="font-size: 24px; font-weight: bold; color: #e74c3c;">0</p>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 8px; border-left: 5px solid var(--verde);">
+            <h3>Acciones Rápidas</h3>
+            <p>Como administrador, puedes validar que el contenido sea útil para la comunidad del ITSON[cite: 2].</p>
+            <button class="btn-principal" onclick="window.location.href='moderacion.html'" style="width: auto; margin-top: 15px;">Ir a Moderación</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Instituto Tecnológico de Sonora - 2026[cite: 2]</p>
+    </footer>
+
+    <script src="js/db.js"></script>
+    <script src="js/dashboard-admin.js"></script>
+    <script src="js/estado-sesion.js"></script>
+</body>
+</html>

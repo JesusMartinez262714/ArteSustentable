@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Panel - Estudiante</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/proteccion.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">Panel Estudiante</div>
+        <nav><ul class="nav-links"></ul></nav>
+    </header>
+
+    <main class="contenedor">
+        <h2>Mis Proyectos Guardados</h2>
+        <div id="contenedor-guardados" class="grid-proyectos"></div>
+        
+        <h2 style="margin-top:40px;">Historial de Envíos</h2>
+        <table class="tabla-admin">
+            <thead><tr><th>Proyecto</th><th>Estado</th></tr></thead>
+            <tbody id="cuerpo-tabla-historial"></tbody>
+        </table>
+    </main>
+
+    <script src="js/db.js"></script>
+    <script src="js/dashboard-alumno.js"></script>
+    <script src="js/estado-sesion.js"></script>
+</body>
+</html>

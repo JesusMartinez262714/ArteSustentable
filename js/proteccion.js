@@ -1,0 +1,2 @@
+if (!localStorage.getItem('sesion_arte_sustentable')) { window.location.href = 'login.html'; }
+function cerrarSesion() { localStorage.removeItem('sesion_arte_sustentable'); window.location.href = 'index.html'; }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderación - Arte Sustentable</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Bloqueo de seguridad: Si no hay sesión, regresa al login -->
+    <script src="js/proteccion.js"></script>
+</head>
+<body>
+    <header class="navbar navbar-admin">
+        <div class="logo">Panel de Moderación</div>
+        <nav>
+            <ul class="nav-links">
+                <!-- El menú se inyecta dinámicamente aquí -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <h2>Proyectos Pendientes de Revisión</h2>
+        <p style="margin-bottom: 20px;">Revisa las propuestas de los alumnos y asegúrate de que cumplan con el enfoque ecológico.</p>
+        
+        <!-- Aquí aparecerán las tarjetas de los proyectos por moderar -->
+        <div id="contenedor-moderacion" class="grid-proyectos">
+            <p>Cargando pendientes...</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Gestión Operativa - Arte Sustentable 2026</p>
+    </footer>
+
+    <!-- Scripts en orden de importancia[cite: 2] -->
+    <script src="js/db.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/estado-sesion.js"></script>
+</body>
+</html>

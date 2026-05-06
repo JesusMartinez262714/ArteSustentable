@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Proyecto - Arte Sustentable</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- Bloqueo de seguridad -->
+    <script src="js/proteccion.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <!-- Logo clickeable que lleva al inicio -->
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Arte Sustentable</a></div>
+        <nav>
+            <ul class="nav-links">
+                <!-- Menú dinámico inyectado por estado-sesion.js -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <div class="contenedor-formulario" style="max-width: 600px;">
+            <h2>Compartir Nuevo Proyecto</h2>
+            <p style="margin-bottom: 20px;">Tu propuesta será revisada por un docente antes de publicarse.</p>
+            
+            <form id="formulario-proyecto">
+                <label for="titulo">Título del proyecto:</label>
+                <input type="text" id="titulo" placeholder="Ej. Lámpara de cartón" required>
+
+                <label for="nivel">Nivel educativo:</label>
+                <select id="nivel" required>
+                    <option value="Primaria">Primaria</option>
+                    <option value="Secundaria">Secundaria</option>
+                    <option value="Preparatoria">Preparatoria</option>
+                    <option value="Universidad">Universidad</option>
+                </select>
+
+                <label for="materiales">Materiales utilizados:</label>
+                <textarea id="materiales" placeholder="Cajas de cereal, pegamento, tijeras..." rows="4" required></textarea>
+
+                <label for="imagen-upload">Foto del trabajo terminado:</label>
+                <input type="file" id="imagen-upload" accept="image/*" required>
+
+                <button type="submit" style="margin-top: 20px;">Enviar a Revisión</button>
+                <p id="mensaje-proyecto" style="margin-top: 10px; font-weight: bold;"></p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Instituto Tecnológico de Sonora - 2026</p>
+    </footer>
+
+    <!-- Scripts en orden de ejecución -->
+    <script src="js/db.js"></script>
+    <script src="js/nuevo-proyecto.js"></script>
+    <script src="js/estado-sesion.js"></script>
+</body>
+</html>
