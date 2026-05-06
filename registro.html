@@ -2,25 +2,43 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Arte Sustentable</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-    <div class="contenedor-formulario">
-        <h2>Crear Cuenta</h2>
-        <form id="formulario-registro">
-            <input type="text" id="nombre" placeholder="Nombre completo" required>
-            <input type="email" id="correo" placeholder="Correo institucional" required>
-            <input type="password" id="password" placeholder="Contraseña" required>
-            <select id="rol">
-                <option value="alumno">Alumno</option>
-                <option value="docente">Docente / Administrador</option>
-            </select>
-            <button type="submit">Registrarse</button>
-        </form>
-        <p style="margin-top:15px;"><a href="login.html">Ya tengo cuenta</a></p>
-    </div>
+<body class="body-sesion">
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Arte Sustentable</a></div>
+        <nav><ul class="nav-links"></ul></nav>
+    </header>
+
+    <main class="contenedor-centrado">
+        <div class="tarjeta-sesion">
+            <h2>Crear Cuenta</h2>
+            <p style="margin-bottom: 25px; color: var(--musgo);">Únete a la comunidad del ITSON</p>
+            
+            <form id="formulario-registro">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="correo" placeholder="Correo institucional" required>
+                <input type="password" id="password" placeholder="Crea una contraseña" required>
+                
+                <select id="rol" required>
+                    <option value="" disabled selected>Selecciona tu rol</option>
+                    <option value="alumno">Estudiante</option>
+                    <option value="docente">Docente / Moderador</option>
+                </select>
+
+                <button type="submit" class="btn-principal" style="margin-top: 10px;">Registrarme</button>
+            </form>
+            
+            <div class="enlace-alterno">
+                <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+            </div>
+        </div>
+    </main>
+
     <script src="js/db.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/estado-sesion.js"></script>
 </body>
 </html>

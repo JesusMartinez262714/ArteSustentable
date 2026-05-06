@@ -2,26 +2,44 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Panel - Estudiante</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Panel - Arte Sustentable</title>
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/proteccion.js"></script>
 </head>
-<body>
+<body class="body-panel">
     <header class="navbar">
-        <div class="logo">Panel Estudiante</div>
+        <div class="logo"><a href="index.html">Arte Sustentable</a></div>
         <nav><ul class="nav-links"></ul></nav>
     </header>
 
     <main class="contenedor">
-        <h2>Mis Proyectos Guardados</h2>
-        <div id="contenedor-guardados" class="grid-proyectos"></div>
+        <div class="seccion-blanca">
+            <h2 style="color: var(--bosque); margin-bottom: 20px;">Mis Proyectos Guardados</h2>
+            <div id="contenedor-guardados" class="grid-proyectos">
+                <!-- Se llena con js/dashboard-alumno.js -->
+            </div>
+        </div>
         
-        <h2 style="margin-top:40px;">Historial de Envíos</h2>
-        <table class="tabla-admin">
-            <thead><tr><th>Proyecto</th><th>Estado</th></tr></thead>
-            <tbody id="cuerpo-tabla-historial"></tbody>
-        </table>
+        <div class="seccion-blanca" style="margin-top: 30px;">
+            <h2 style="color: var(--bosque); margin-bottom: 20px;">Historial de Envíos</h2>
+            <table class="tabla-admin">
+                <thead>
+                    <tr>
+                        <th>Proyecto</th>
+                        <th>Estado de Revisión</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla-historial">
+                    <!-- Se llena con js/dashboard-alumno.js -->
+                </tbody>
+            </table>
+        </div>
     </main>
+
+    <footer class="footer">
+        <p>Instituto Tecnológico de Sonora - 2026</p>
+    </footer>
 
     <script src="js/db.js"></script>
     <script src="js/dashboard-alumno.js"></script>

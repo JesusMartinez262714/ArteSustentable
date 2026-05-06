@@ -5,30 +5,37 @@
     <title>Catálogo - Arte Sustentable</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body class="body-catalogo"> <!-- Mantiene el fondo.png en imagenes/ -->
     <header class="navbar">
-        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">Arte Sustentable</a></div>
-        <div class="logo">Catálogo</div>
+        <div class="logo"><a href="index.html">Arte Sustentable</a></div>
         <nav><ul class="nav-links"></ul></nav>
     </header>
 
-    <main class="contenedor">
-        <div class="filtros" style="margin-bottom:20px; display:flex; gap:10px;">
-            <input type="text" id="buscar-texto" placeholder="Buscar..." onkeyup="filtrar()">
-            <select id="filtro-nivel" onchange="filtrar()">
-                <option value="todos">Todos</option>
-                <option value="Primaria">Primaria</option>
-                <option value="Secundaria">Secundaria</option>
-                <option value="Preparatoria">Preparatoria</option>
-                <option value="Universidad">Universidad</option>
-            </select>
+    <!-- Usamos el nuevo contenedor extenso -->
+    <main class="contenedor-catalogo-extenso">
+        <div class="seccion-blanca">
+            <h2 style="color: var(--bosque); margin-bottom: 20px; text-align: center;">Explora las Ideas</h2>
+            
+            <div class="filtros" style="display: flex; gap: 10px; margin-bottom: 25px; justify-content: center;">
+                <input type="text" id="buscar-texto" placeholder="Buscar por nombre o material..." onkeyup="filtrar()" style="max-width: 400px;">
+                <select id="filtro-nivel" onchange="filtrar()" style="max-width: 200px;">
+                    <option value="todos">Todos los niveles</option>
+                    <option value="Primaria">Primaria</option>
+                    <option value="Secundaria">Secundaria</option>
+                    <option value="Preparatoria">Preparatoria</option>
+                    <option value="Universidad">Universidad</option>
+                </select>
+            </div>
+
+            <!-- Contenedor de la cuadrícula horizontal -->
+            <div id="contenedor-catalogo" class="grid-proyectos">
+                <!-- Se llena con js/catalogo.js -->
+            </div>
         </div>
-        <div id="contenedor-catalogo" class="grid-proyectos"></div>
     </main>
 
     <script src="js/db.js"></script>
     <script src="js/catalogo.js"></script>
-    <script src="js/proteccion.js"></script>
     <script src="js/estado-sesion.js"></script>
 </body>
 </html>

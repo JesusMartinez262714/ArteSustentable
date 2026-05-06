@@ -2,21 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar Sesión</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Arte Sustentable</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-    <div class="contenedor-formulario">
-        <h2>Entrar a Arte Sustentable</h2>
-        <form id="formulario-login">
-            <input type="email" id="correo" placeholder="Correo electrónico" required>
-            <input type="password" id="password" placeholder="Contraseña" required>
-            <button type="submit">Entrar</button>
-            <p id="mensaje-error" style="color:red; margin-top:10px;"></p>
-        </form>
-        <p style="margin-top:15px;">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
-    </div>
+<body class="body-sesion">
+    <header class="navbar">
+        <div class="logo"><a href="index.html">Arte Sustentable</a></div>
+        <nav><ul class="nav-links"></ul></nav>
+    </header>
+
+    <main class="contenedor-centrado">
+        <div class="tarjeta-sesion">
+            <h2>Bienvenido de Nuevo</h2>
+            <p style="margin-bottom: 25px; color: var(--musgo);">Ingresa tus credenciales para continuar</p>
+            
+            <form id="formulario-login">
+                <input type="email" id="correo" placeholder="Correo institucional" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-principal" style="margin-top: 10px;">Entrar</button>
+                <p id="mensaje-error" style="color: #e74c3c; margin-top: 15px; font-weight: bold;"></p>
+            </form>
+            
+            <div class="enlace-alterno">
+                <p>¿Aún no tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+            </div>
+        </div>
+    </main>
+
     <script src="js/db.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/estado-sesion.js"></script>
 </body>
 </html>
